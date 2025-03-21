@@ -7,3 +7,9 @@ test("mean of two numbers", () => {
   expect(result).toBe(expected);
 });
 
+test("mean of five numbers", () => {
+  const numbers = [2, 4, 6, 8, 10];  // Fünf Zahlen
+  const expected = 6;                // Erwartungswert: (2 + 4 + 6 + 8 + 10) / 5 = 6
+  const result = mean(numbers);
+  expect(result).toBe(expected);
+});
