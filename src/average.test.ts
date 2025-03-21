@@ -1,13 +1,19 @@
-import { mean } from "./average";
+import { average } from "./average";
 
-test("test mean of two numbers", () => {
-  // Arrange
-  const numbers: number[] = [1, 4];
-  const expected: number = 2.5;
+test("average of [2, 4, 6] is 4", () => {
+  const input = [2, 4, 6];
+  const expected = 4;
+  const result = average(input);
+  expect(result).toBe(expected);
+});
 
-  // Act
-  const actual: number = mean(numbers);
+test("average of [10] is 10", () => {
+  const input = [10];
+  const expected = 10;
+  const result = average(input);
+  expect(result).toBe(expected);
+});
 
-  // Assert
-  expect(actual).toBe(expected);
+test("average of empty array throws error", () => {
+  expect(() => average([])).toThrow("Cannot calculate average of empty array");
 });
