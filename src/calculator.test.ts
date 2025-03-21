@@ -47,10 +47,9 @@ test("divide ten by two is five", () => {
   expect(actual).toBe(expected);
 });
 
-test("divide any number by zero returns Infinity", () => {
+test("division by zero should throw an error", () => {
   const dividend: number = 10;
   const divisor: number = 0;
-  const expected: number = Infinity;
-  const actual: number = divide(dividend, divisor);
-  expect(actual).toBe(expected);
+
+  expect(() => divide(dividend, divisor)).toThrow("Division by zero is not allowed");
 });
