@@ -17,15 +17,15 @@ test("mean of five numbers", () => {
 
 // Median
 test("median for odd number of elements", () => {
-  const numbers = [1, 3, 5, 7, 9, 11, 13]; 
-  const expected = 7; 
+  const numbers = [13, 1, 9, 3, 7, 11, 5];
+  const expected = 7;
   const result = median(numbers);
   expect(result).toBe(expected);
 });
 
 test("median for even number of elements", () => {
-  const numbers = [1, 3, 5, 7, 9, 11]; 
-  const expected = (5 + 7) / 2;
+  const numbers = [11, 1, 9, 3, 7, 5];
+  const expected = 6;
   const result = median(numbers);
   expect(result).toBe(expected);
 });
