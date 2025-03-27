@@ -1,5 +1,6 @@
 import { mean, median } from "./average";
 
+// Mean
 test("mean of two numbers", () => {
   const numbers = [4, 6];
   const expected = 5;
@@ -14,16 +15,17 @@ test("mean of five numbers", () => {
   expect(result).toBe(expected);
 });
 
+// Median
 test("median for odd number of elements", () => {
-  const numbers = [1, 3, 5, 7, 9];
-  const expected = 5;
+  const numbers = [1, 3, 5, 7, 9, 11, 13]; 
+  const expected = 7; 
   const result = median(numbers);
   expect(result).toBe(expected);
 });
 
 test("median for even number of elements", () => {
-  const numbers = [1, 3, 5, 7];
-  const expected = 4;
+  const numbers = [1, 3, 5, 7, 9, 11]; 
+  const expected = (5 + 7) / 2;
   const result = median(numbers);
   expect(result).toBe(expected);
 });
